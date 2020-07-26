@@ -1,0 +1,130 @@
+body {
+  margin: 20px 200px;
+  border: 12px solid#00B8A9;
+  padding: 30px;
+  border-radius: 10px;
+  background-image: linear-gradient(#abedd8, #e0f9b5, #00b8a9, #3d84a8);
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+.all {
+  background: #abedd8;
+  padding: 30px;
+  border-radius: 10px;
+}
+.city {
+  color: #00b8a9;
+}
+.date {
+  color: #3d84a8;
+  text-align: right;
+}
+.temp {
+  color: #00b8a9;
+}
+.time {
+  color: #3d84a8;
+  text-align: right;
+}
+.weathertoday {
+  color: #ffde7d;
+  font-size: 100px;
+  text-align: center;
+  border: 15px solid#48466D;
+  padding: 30px;
+  border-radius: 90px;
+  background: #3d84a8;
+  display: block;
+  margin: 0 auto;
+}
+.humidity {
+  color: #3d84a8;
+}
+.wind {
+  color: #00b8a9;
+}
+.weather {
+  color: #00b8a9;
+  text-align: right;
+}
+form {
+  text-align: center;
+}
+.monday {
+  color: #3d84a8;
+  text-align: center;
+}
+.weathermonday {
+  color: #ffde7d;
+  font-size: 60px;
+  text-align: center;
+  border: 5px solid#48466D;
+  padding: 20px;
+  border-radius: 90px;
+  background: #3d84a8;
+}
+.tuesday {
+  color: #3d84a8;
+  text-align: center;
+}
+.weathertuesday {
+  color: #ffde7d;
+  font-size: 60px;
+  text-align: center;
+  border: 5px solid#48466D;
+  padding: 20px;
+  border-radius: 90px;
+  background: #3d84a8;
+}
+.wednesday {
+  color: #3d84a8;
+  text-align: center;
+}
+.weatherwednesday {
+  color: #ffde7d;
+  font-size: 60px;
+  text-align: center;
+  border: 5px solid#48466D;
+  padding: 20px;
+  border-radius: 90px;
+  background: #3d84a8;
+}
+.thursday {
+  color: #3d84a8;
+  text-align: center;
+}
+.weatherthursday {
+  color: #ffde7d;
+  font-size: 60px;
+  text-align: center;
+  border: 5px solid#48466D;
+  padding: 20px;
+  border-radius: 90px;
+  background: #3d84a8;
+}
+.friday {
+  color: #3d84a8;
+  text-align: center;
+}
+.weatherfriday {
+  color: #ffde7d;
+  font-size: 60px;
+  text-align: center;
+  border: 5px solid#48466D;
+  padding: 20px;
+  border-radius: 90px;
+  background: #3d84a8;
+}
+.saturday {
+  color: #3d84a8;
+  text-align: center;
+}
+.weathersaturday {
+  color: #ffde7d;
+  font-size: 60px;
+  text-align: center;
+  border: 5px solid#48466D;
+  padding: 20px;
+  border-radius: 90px;
+  background: #3d84a8;
+}
