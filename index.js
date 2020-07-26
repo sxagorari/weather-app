@@ -2,13 +2,15 @@ let now = new Date();
 
 function time() {
   let hourNow = now.getHours();
-  let minutesNow = now.getMinutes();
+  let minutesNow = fullMinutes(now.getMinutes());
   let timePlace = document.querySelector("#current-time");
   return (timePlace.innerHTML = `${hourNow}:${minutesNow}`);
 }
 function fullMinutes(minutesNow) {
   if (minutesNow < 10) {
     return "0" + now.getMinutes();
+  } else {
+    return minutesNow;
   }
 }
 
