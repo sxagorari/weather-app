@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <script
       src="https://kit.fontawesome.com/94d4d445a2.js"
       crossorigin="anonymous"
@@ -28,20 +28,23 @@
         <div class="row">
           <div class="col-4">
             <div class="city">
-              <h2 id="city-input"></h2>
+              <h2 id="city-input">London</h2>
             </div>
             <br />
             <div class="temp">
-              <h1 id="temp-now"></h1>
+              <h1 id="temp-now">19°C</h1>
             </div>
             <br />
             <div class="humidity">
-              <h6 id="humidity-now"><i class="fas fa-tint"></i></h6>
+              <h6>
+                <i class="fas fa-tint"></i
+                ><span id="humidity-now">Humidity = 20%</span>
+              </h6>
             </div>
             <div class="wind">
               <h6>
                 <i class="fas fa-wind"></i> Wind =
-                <span id="wind-speed"></span>
+                <span id="wind-speed">8</span>
                 km/h
               </h6>
             </div>
@@ -137,6 +140,6 @@
         </div>
       </div>
     </div>
-    <script src="index.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
