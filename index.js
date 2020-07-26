@@ -6,7 +6,14 @@ function time() {
   let timePlace = document.querySelector("#current-time");
   return (timePlace.innerHTML = `${hourNow}:${minutesNow}`);
 }
+function fullMinutes(minutesNow) {
+  if (minutesNow < 10) {
+    return "0" + now.getMinutes();
+  }
+}
+
 time();
+
 function dateToday() {
   let date = now.getDate();
   let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
