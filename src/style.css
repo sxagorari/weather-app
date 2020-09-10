@@ -1,19 +1,20 @@
 body {
-  margin: 20px 200px;
-  border: 12px solid#00B8A9;
-  padding: 30px;
+  max-width: 1000px;
+  margin: 5px auto;
+  padding: 20px 80px;
   border-radius: 10px;
   background-image: linear-gradient(#abedd8, #e0f9b5, #00b8a9, #3d84a8);
-  font-weight: bold;
+  font-weight: 100;
   font-family: "Montserrat", sans-serif;
 }
 .all {
   background: #abedd8;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 .city {
   color: #00b8a9;
+  margin-bottom: 0;
 }
 .date {
   color: #3d84a8;
@@ -33,7 +34,7 @@ body {
   border: 15px solid#48466D;
   padding: 30px;
   border-radius: 90px;
-  background: #3d84a8;
+  background: #00b8a9;
   display: block;
   margin: 0 auto;
 }

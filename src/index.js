@@ -1,7 +1,7 @@
 let now = new Date();
 
 function time() {
-  let hourNow = now.getHours();
+  let hourNow = fullHour(now.getHours());
   let minutesNow = fullMinutes(now.getMinutes());
   let timePlace = document.querySelector("#current-time");
   return (timePlace.innerHTML = `${hourNow}:${minutesNow}`);
@@ -11,6 +11,13 @@ function fullMinutes(minutesNow) {
     return "0" + now.getMinutes();
   } else {
     return minutesNow;
+  }
+}
+function fullHour(hourNow) {
+  if (hourNow < 10) {
+    return "0" + now.getHours();
+  } else {
+    return hourNow;
   }
 }
 
