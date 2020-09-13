@@ -95,6 +95,102 @@ function day3Day() {
 }
 day3Day();
 
+function day4Day() {
+  let date = now.getDate();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = days[now.getDay() + 3];
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = months[now.getMonth()];
+  let day4Place = document.querySelector("#fourthday");
+  return (day4Place.innerHTML = `${day}`);
+}
+day4Day();
+
+function day5Day() {
+  let date = now.getDate();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = days[now.getDay() + 4];
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = months[now.getMonth()];
+  let day5Place = document.querySelector("#fifthday");
+  return (day5Place.innerHTML = `${day}`);
+}
+day5Day();
+
+function day6Day() {
+  let date = now.getDate();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = days[now.getDay() + 5];
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = months[now.getMonth()];
+  let day6Place = document.querySelector("#sixthday");
+  return (day6Place.innerHTML = `${day}`);
+}
+day6Day();
+
+function day7Day() {
+  let date = now.getDate();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = days[now.getDay() + 6];
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = months[now.getMonth()];
+  let day7Place = document.querySelector("#seventhday");
+  return (day7Place.innerHTML = `${day}`);
+}
+day7Day();
+
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
@@ -106,17 +202,20 @@ function search(event) {
 function searchCity(currentCity) {
   let apiKey = "2508b75b8cfd9ad6ef1af480d0065588";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&units=metric&appid=${apiKey}`;
-  axios.get(`${apiUrl}`).then(showTemperature);
+  axios.get(`${apiUrl}`).then(showTemperatureToday);
   axios.get(`${apiUrl}`).then(showCity);
   axios.get(`${apiUrl}`).then(showHumidity);
   axios.get(`${apiUrl}`).then(showWeather);
   axios.get(`${apiUrl}`).then(showWind);
+
+  apiUrl = `api.openweathermap.org/data/2.5/forecast?q=${currentCity}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
-function showTemperature(response) {
+function showTemperatureToday(response) {
   console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
   console.log(temperature);
@@ -124,6 +223,16 @@ function showTemperature(response) {
   let displayTemp = document.querySelector("#temp-now");
   displayTemp.innerHTML = message;
 }
+
+function showTemperatureSecondDay(response) {
+  console.log(response.data);
+  let temperature = Math.round(response.data.main.temp);
+  console.log(temperature);
+  let message = `${temperature}°C`;
+  let displayTemp2 = document.querySelector("#temp-second-day");
+  displayTemp2.innerHTML = message;
+}
+showTemperatureSecondDay();
 
 function showCity(response) {
   let city = response.data.name;
