@@ -7,6 +7,9 @@ body {
   font-weight: 100;
   font-family: "Montserrat", sans-serif;
 }
+a {
+  color: black;
+}
 .all {
   background: #abedd8;
   padding: 30px;
