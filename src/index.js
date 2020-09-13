@@ -25,7 +25,7 @@ time();
 
 function dateToday() {
   let date = now.getDate();
-  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let day = days[now.getDay()];
   let months = [
     "Jan",
@@ -46,6 +46,54 @@ function dateToday() {
   return (datePlace.innerHTML = `${day}, ${date} ${month}`);
 }
 dateToday();
+
+function day2Day() {
+  let date = now.getDate();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = days[now.getDay() + 1];
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = months[now.getMonth()];
+  let day2Place = document.querySelector("#secondday");
+  return (day2Place.innerHTML = `${day}`);
+}
+day2Day();
+
+function day3Day() {
+  let date = now.getDate();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = days[now.getDay() + 2];
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = months[now.getMonth()];
+  let day3Place = document.querySelector("#thirdday");
+  return (day3Place.innerHTML = `${day}`);
+}
+day3Day();
 
 function search(event) {
   event.preventDefault();
