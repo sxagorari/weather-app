@@ -54,7 +54,7 @@ a {
 form {
   text-align: center;
 }
-.monday {
+.day2 {
   color: #3d84a8;
   text-align: center;
 }
@@ -63,7 +63,7 @@ form {
   font-size: 60px;
   text-align: center;
 }
-.tuesday {
+.day3 {
   color: #3d84a8;
   text-align: center;
 }
@@ -72,7 +72,7 @@ form {
   font-size: 60px;
   text-align: center;
 }
-.wednesday {
+.day4 {
   color: #3d84a8;
   text-align: center;
 }
@@ -81,7 +81,7 @@ form {
   font-size: 60px;
   text-align: center;
 }
-.thursday {
+.day5 {
   color: #3d84a8;
   text-align: center;
 }
@@ -90,7 +90,7 @@ form {
   font-size: 60px;
   text-align: center;
 }
-.friday {
+.day6 {
   color: #3d84a8;
   text-align: center;
 }
@@ -99,7 +99,7 @@ form {
   font-size: 60px;
   text-align: center;
 }
-.saturday {
+.day7 {
   color: #3d84a8;
   text-align: center;
 }
