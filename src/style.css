@@ -54,56 +54,11 @@ a {
 form {
   text-align: center;
 }
-.day2 {
+.fourhour {
   color: #3d84a8;
   text-align: center;
 }
-.weathermonday {
-  color: #48466d;
-  font-size: 60px;
-  text-align: center;
-}
-.day3 {
-  color: #3d84a8;
-  text-align: center;
-}
-.weathertuesday {
-  color: #48466d;
-  font-size: 60px;
-  text-align: center;
-}
-.day4 {
-  color: #3d84a8;
-  text-align: center;
-}
-.weatherwednesday {
-  color: #48466d;
-  font-size: 60px;
-  text-align: center;
-}
-.day5 {
-  color: #3d84a8;
-  text-align: center;
-}
-.weatherthursday {
-  color: #48466d;
-  font-size: 60px;
-  text-align: center;
-}
-.day6 {
-  color: #3d84a8;
-  text-align: center;
-}
-.weatherfriday {
-  color: #48466d;
-  font-size: 60px;
-  text-align: center;
-}
-.day7 {
-  color: #3d84a8;
-  text-align: center;
-}
-.weathersaturday {
+.weathersecondday {
   color: #48466d;
   font-size: 60px;
   text-align: center;
