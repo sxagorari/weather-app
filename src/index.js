@@ -169,7 +169,7 @@ day6Day();
 
 function day7Day() {
   let date = now.getDate();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   let day = days[now.getDay() + 6];
   let months = [
     "Jan",
@@ -199,6 +199,10 @@ function search(event) {
   searchCity(currentCity);
 }
 
+function displayForecast(response) {
+  console.log(response.data);
+}
+
 function searchCity(currentCity) {
   let apiKey = "2508b75b8cfd9ad6ef1af480d0065588";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&units=metric&appid=${apiKey}`;
@@ -223,16 +227,6 @@ function showTemperatureToday(response) {
   let displayTemp = document.querySelector("#temp-now");
   displayTemp.innerHTML = message;
 }
-
-function showTemperatureSecondDay(response) {
-  console.log(response.data);
-  let temperature = Math.round(response.data.main.temp);
-  console.log(temperature);
-  let message = `${temperature}°C`;
-  let displayTemp2 = document.querySelector("#temp-second-day");
-  displayTemp2.innerHTML = message;
-}
-showTemperatureSecondDay();
 
 function showCity(response) {
   let city = response.data.name;
