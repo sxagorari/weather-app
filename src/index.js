@@ -1,33 +1,24 @@
-setInterval("time();", 5000);
-
-function time() {
-  window.location = location.href;
-}
-
 let now = new Date();
 
-function time() {
-  let hourNow = fullHour(now.getHours());
-  let minutesNow = fullMinutes(now.getMinutes());
-  let timePlace = document.querySelector("#current-time");
-  return (timePlace.innerHTML = `${hourNow}:${minutesNow}`);
-}
-function fullMinutes(minutesNow) {
-  if (minutesNow < 10) {
-    return "0" + now.getMinutes();
-  } else {
-    return minutesNow;
-  }
-}
-function fullHour(hourNow) {
-  if (hourNow < 10) {
-    return "0" + now.getHours();
-  } else {
-    return hourNow;
-  }
-}
+var time = {};
 
-time();
+(function time() {
+  var clock = document.querySelector("#current-time");
+
+  (function tick() {
+    var minutes,
+      d = new Date();
+    time.minutes = d.getMinutes();
+    time.hours = d.getHours();
+    time.seconds = d.getSeconds();
+    time.ms = d.getMilliseconds();
+
+    minutes = time.minutes < 10 ? "0" + time.minutes : time.minutes;
+
+    clock.innerHTML = time.hours + ":" + minutes;
+    window.setTimeout(tick, 1000);
+  })();
+})();
 
 function dateToday() {
   let date = now.getDate();
