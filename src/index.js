@@ -1,3 +1,9 @@
+setInterval("time();", 5000);
+
+function time() {
+  window.location = location.href;
+}
+
 let now = new Date();
 
 function time() {
