@@ -11,7 +11,7 @@ a {
   color: white;
 }
 .all {
-  background: #abedd8;
+  background: #d1d0e1;
   padding: 30px;
   border-radius: 30px;
 }
@@ -55,12 +55,11 @@ a {
 form {
   text-align: center;
 }
-.fourhour {
+.threehour {
   color: #3d84a8;
   text-align: center;
 }
-.weathersecondday {
-  color: #48466d;
-  font-size: 60px;
-  text-align: center;
+.windforecast {
+  color: #00b8a9;
+  font-weight: bold;
 }

@@ -75,7 +75,105 @@ function displayForecast(response) {
               <div class="weatherthreehour">
                 <h6><strong>${Math.round(
                   forecast.main.temp_max
-                )}°C/</strong>${Math.round(forecast.main.temp_min)}°C</h3>
+                )}°C/</strong>${Math.round(forecast.main.temp_min)}°C</h6>
+    <div class="windforecast">
+                <h6>${Math.round(forecast.wind.speed)}km/h</h6>
+                </div>
+              </div>
+            </div>
+          </div>`;
+
+  forecast = response.data.list[1];
+  forecastElement.innerHTML += `<div class="col-2">
+            <div class="threehour">
+              <h5>${formatHours(forecast.dt * 1000)}</h5>
+              <img
+              src = "http://openweathermap.org/img/wn/${
+                forecast.weather[0].icon
+              }@2x.png"/>
+              <div class="weatherthreehour">
+                <h6><strong>${Math.round(
+                  forecast.main.temp_max
+                )}°C/</strong>${Math.round(forecast.main.temp_min)}°C</h6>
+    <div class="windforecast">
+               <h6>${Math.round(forecast.wind.speed)}km/h</h6>
+                </div>
+              </div>
+            </div>
+          </div>`;
+
+  forecast = response.data.list[2];
+  forecastElement.innerHTML += `<div class="col-2">
+            <div class="threehour">
+              <h5>${formatHours(forecast.dt * 1000)}</h5>
+              <img
+              src = "http://openweathermap.org/img/wn/${
+                forecast.weather[0].icon
+              }@2x.png"/>
+              <div class="weatherthreehour">
+                <h6><strong>${Math.round(
+                  forecast.main.temp_max
+                )}°C/</strong>${Math.round(forecast.main.temp_min)}°C</h6>
+    <div class="windforecast">
+               <h6>${Math.round(forecast.wind.speed)}km/h</h6>
+                </div>
+              </div>
+            </div>
+          </div>`;
+
+  forecast = response.data.list[3];
+  forecastElement.innerHTML += `<div class="col-2">
+            <div class="threehour">
+              <h5>${formatHours(forecast.dt * 1000)}</h5>
+              <img
+              src = "http://openweathermap.org/img/wn/${
+                forecast.weather[0].icon
+              }@2x.png"/>
+              <div class="weatherthreehour">
+                <h6><strong>${Math.round(
+                  forecast.main.temp_max
+                )}°C/</strong>${Math.round(forecast.main.temp_min)}°C</h6>
+    <div class="windforecast">
+               <h6>${Math.round(forecast.wind.speed)}km/h</h6>
+                </div>
+              </div>
+            </div>
+          </div>`;
+
+  forecast = response.data.list[4];
+  forecastElement.innerHTML += `<div class="col-2">
+            <div class="threehour">
+              <h5>${formatHours(forecast.dt * 1000)}</h5>
+              <img
+              src = "http://openweathermap.org/img/wn/${
+                forecast.weather[0].icon
+              }@2x.png"/>
+              <div class="weatherthreehour">
+                <h6><strong>${Math.round(
+                  forecast.main.temp_max
+                )}°C/</strong>${Math.round(forecast.main.temp_min)}°C</h6>
+    <div class="windforecast">
+                <h6>${Math.round(forecast.wind.speed)}km/h</h6>
+                </div>
+              </div>
+            </div>
+          </div>`;
+
+  forecast = response.data.list[5];
+  forecastElement.innerHTML += `<div class="col-2">
+            <div class="threehour">
+              <h5>${formatHours(forecast.dt * 1000)}</h5>
+              <img
+              src = "http://openweathermap.org/img/wn/${
+                forecast.weather[0].icon
+              }@2x.png"/>
+              <div class="weatherthreehour">
+                <h6><strong>${Math.round(
+                  forecast.main.temp_max
+                )}°C/</strong>${Math.round(forecast.main.temp_min)}°C</h6>
+    <div class="windforecast">
+                <h6>${Math.round(forecast.wind.speed)}km/h</h6>
+                </div>
               </div>
             </div>
           </div>`;
@@ -140,7 +238,7 @@ function showWeather(response) {
 function showWind(response) {
   let windSpeed = response.data.wind.speed;
   console.log(windSpeed);
-  let updateWind = `${windSpeed}`;
+  let updateWind = `${Math.round(windSpeed)}`;
   let windElement = document.querySelector("#wind-speed");
   windElement.innerHTML = updateWind;
 }
