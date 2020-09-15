@@ -40,6 +40,19 @@ function dateToday() {
 }
 dateToday();
 
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
@@ -49,10 +62,31 @@ function search(event) {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
-  forecast;
-  console.log(response.data.list[0]);
+  let forecast = response.data.list[0];
+  console.log(forecast);
+  forecastElement.innerHTML = `<div class="col-2">
+            <div class="threehour">
+              <h5>${formatHours(forecast.dt * 1000)}</h5>
+              <img
+              src = "http://openweathermap.org/img/wn/${
+                forecast.weather[0].icon
+              }@2x.png"/>
+              <div class="weatherthreehour">
+                <h6><strong>${Math.round(
+                  forecast.main.temp_max
+                )}°C/</strong>${Math.round(forecast.main.temp_min)}°C</h3>
+              </div>
+            </div>
+          </div>`;
+}
+
+function showIconToday(response) {
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchCity(currentCity) {
@@ -63,6 +97,7 @@ function searchCity(currentCity) {
   axios.get(`${apiUrl}`).then(showHumidity);
   axios.get(`${apiUrl}`).then(showWeather);
   axios.get(`${apiUrl}`).then(showWind);
+  axios.get(`${apiUrl}`).then(showIconToday);
 
   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${currentCity}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(displayForecast);

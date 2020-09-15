@@ -3,12 +3,12 @@ body {
   margin: 5px auto;
   padding: 20px 80px;
   border-radius: 10px;
-  background-image: linear-gradient(#abedd8, #e0f9b5, #00b8a9, #3d84a8);
+  background-color: #48466d;
   font-weight: 100;
   font-family: "Montserrat", sans-serif;
 }
 a {
-  color: black;
+  color: white;
 }
 .all {
   background: #abedd8;
@@ -32,15 +32,16 @@ a {
 }
 .weathertoday {
   color: #ffde7d;
-  font-size: 100px;
+  font-size: 90px;
   text-align: center;
-  border: 15px solid#48466D;
-  padding: 30px;
-  border-radius: 90px;
+  border: 10px solid#48466D;
+  padding: 20px;
+  border-radius: 100px;
   background: #00b8a9;
   display: block;
   margin: 0 auto;
 }
+
 .humidity {
   color: #3d84a8;
 }
