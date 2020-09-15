@@ -242,3 +242,25 @@ function showWind(response) {
   let windElement = document.querySelector("#wind-speed");
   windElement.innerHTML = updateWind;
 }
+
+function showPosition(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=2508b75b8cfd9ad6ef1af480d0065588&units=metric`;
+  axios.get(`${apiUrl}`).then(showTemperatureToday);
+  axios.get(`${apiUrl}`).then(showCity);
+  axios.get(`${apiUrl}`).then(showHumidity);
+  axios.get(`${apiUrl}`).then(showWeather);
+  axios.get(`${apiUrl}`).then(showWind);
+  axios.get(`${apiUrl}`).then(showIconToday);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=2508b75b8cfd9ad6ef1af480d0065588&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function getCurrentPosition() {
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+let locationbutton = document.querySelector("#locbutton");
+locationbutton.addEventListener("click", getCurrentPosition);
