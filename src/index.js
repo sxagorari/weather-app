@@ -177,6 +177,126 @@ function displayForecast(response) {
               </div>
             </div>
           </div>`;
+
+  forecast = response.data.list[6];
+  forecastElement.innerHTML += `<div class="col-2">
+            <div class="threehour">
+              <br /><h5>${formatHours(forecast.dt * 1000)}</h5>
+              <h6>
+              <img
+              src = "http://openweathermap.org/img/wn/${
+                forecast.weather[0].icon
+              }@2x.png"/>
+              <div class="weatherthreehour">
+                <h6><strong>${Math.round(
+                  forecast.main.temp_max
+                )}°C/</strong>${Math.round(forecast.main.temp_min)}°C</h6>
+    <div class="windforecast">
+                <h6>${Math.round(forecast.wind.speed)}km/h</h6>
+                </div>
+              </div>
+            </div>
+          </div>`;
+
+  forecast = response.data.list[7];
+  forecastElement.innerHTML += `<div class="col-2">
+            <div class="threehour">
+              <br /><h5>${formatHours(forecast.dt * 1000)}</h5>
+              <h6>
+              <img
+              src = "http://openweathermap.org/img/wn/${
+                forecast.weather[0].icon
+              }@2x.png"/>
+              <div class="weatherthreehour">
+                <h6><strong>${Math.round(
+                  forecast.main.temp_max
+                )}°C/</strong>${Math.round(forecast.main.temp_min)}°C</h6>
+    <div class="windforecast">
+                <h6>${Math.round(forecast.wind.speed)}km/h</h6>
+                </div>
+              </div>
+            </div>
+          </div>`;
+
+  forecast = response.data.list[8];
+  forecastElement.innerHTML += `<div class="col-2">
+            <div class="threehour">
+              <br /><h5>${formatHours(forecast.dt * 1000)}</h5>
+              <h6>
+              <img
+              src = "http://openweathermap.org/img/wn/${
+                forecast.weather[0].icon
+              }@2x.png"/>
+              <div class="weatherthreehour">
+                <h6><strong>${Math.round(
+                  forecast.main.temp_max
+                )}°C/</strong>${Math.round(forecast.main.temp_min)}°C</h6>
+    <div class="windforecast">
+                <h6>${Math.round(forecast.wind.speed)}km/h</h6>
+                </div>
+              </div>
+            </div>
+          </div>`;
+
+  forecast = response.data.list[9];
+  forecastElement.innerHTML += `<div class="col-2">
+            <div class="threehour">
+              <br /><h5>${formatHours(forecast.dt * 1000)}</h5>
+              <h6>
+              <img
+              src = "http://openweathermap.org/img/wn/${
+                forecast.weather[0].icon
+              }@2x.png"/>
+              <div class="weatherthreehour">
+                <h6><strong>${Math.round(
+                  forecast.main.temp_max
+                )}°C/</strong>${Math.round(forecast.main.temp_min)}°C</h6>
+    <div class="windforecast">
+                <h6>${Math.round(forecast.wind.speed)}km/h</h6>
+                </div>
+              </div>
+            </div>
+          </div>`;
+
+  forecast = response.data.list[10];
+  forecastElement.innerHTML += `<div class="col-2">
+            <div class="threehour">
+              <br /><h5>${formatHours(forecast.dt * 1000)}</h5>
+              <h6>
+              <img
+              src = "http://openweathermap.org/img/wn/${
+                forecast.weather[0].icon
+              }@2x.png"/>
+              <div class="weatherthreehour">
+                <h6><strong>${Math.round(
+                  forecast.main.temp_max
+                )}°C/</strong>${Math.round(forecast.main.temp_min)}°C</h6>
+    <div class="windforecast">
+                <h6>${Math.round(forecast.wind.speed)}km/h</h6>
+                </div>
+              </div>
+            </div>
+          </div>`;
+
+  forecast = response.data.list[11];
+  forecastElement.innerHTML += `<div class="col-2">
+            <div class="threehour">
+              <br /><h5>${formatHours(forecast.dt * 1000)}</h5>
+              <h6>
+              <img
+              src = "http://openweathermap.org/img/wn/${
+                forecast.weather[0].icon
+              }@2x.png"/>
+              <div class="weatherthreehour">
+                <h6><strong>${Math.round(
+                  forecast.main.temp_max
+                )}°C/</strong>${Math.round(forecast.main.temp_min)}°C</h6>
+    <div class="windforecast">
+                <h6>${Math.round(forecast.wind.speed)}km/h</h6>
+                </div>
+              </div>
+            </div>
+          </div>`;
 }
 
 function showIconToday(response) {
@@ -212,7 +332,7 @@ function displayFahrenheitTemperature(event) {
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp-now");
-  temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°C`;
+  temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°`;
 }
 
 let celsiusTemperature = null;
