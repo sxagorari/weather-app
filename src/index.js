@@ -332,7 +332,7 @@ function displayFahrenheitTemperature(event) {
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp-now");
-  temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°`;
+  temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°C`;
 }
 
 let celsiusTemperature = null;
