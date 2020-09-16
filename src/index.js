@@ -196,13 +196,35 @@ function searchCity(currentCity) {
   axios.get(`${apiUrl}`).then(showWeather);
   axios.get(`${apiUrl}`).then(showWind);
   axios.get(`${apiUrl}`).then(showIconToday);
+  axios.get(`${apiUrl}`).then(celsiusTemp);
 
   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${currentCity}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(displayForecast);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahreinheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temp-now");
+  temperatureElement.innerHTML = `${Math.round(fahreinheitTemperature)}°F`;
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp-now");
+  temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°C`;
+}
+
+let celsiusTemperature = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 function showTemperatureToday(response) {
   console.log(response.data);
@@ -218,6 +240,10 @@ function showCity(response) {
   let updateCity = `${city}`;
   let h1 = document.querySelector("#city-input");
   h1.innerHTML = updateCity;
+}
+
+function celsiusTemp(response) {
+  celsiusTemperature = response.data.main.temp;
 }
 
 function showHumidity(response) {
